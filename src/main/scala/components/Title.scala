@@ -1,4 +1,4 @@
-package tutorial.webapp.components
+package components
 
 import japgolly.scalajs.react.ScalaComponent
 import japgolly.scalajs.react.vdom.html_<^._

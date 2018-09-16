@@ -1,7 +1,7 @@
 enablePlugins(ScalaJSPlugin)
 enablePlugins(ScalaJSBundlerPlugin)
 
-name := "Scala.js Tutorial"
+name := "Scala.js starter"
 scalaVersion := "2.12.6" // or any other Scala version >= 2.10.2
 
 // This is an application with a main method

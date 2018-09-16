@@ -1,4 +1,4 @@
-package tutorial.webapp
+package webapp
 
 import org.scalajs.dom.document
 

@@ -1,8 +1,8 @@
-package tutorial.webapp
+package webapp
 
 import japgolly.scalajs.react.extra.router._
 import japgolly.scalajs.react.vdom.html_<^._
-import tutorial.webapp.pages.HomePage
+import pages.HomePage
 
 object AppRouter {
 

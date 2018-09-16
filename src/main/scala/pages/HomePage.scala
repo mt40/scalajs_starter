@@ -1,8 +1,8 @@
-package tutorial.webapp.pages
+package pages
 
 import japgolly.scalajs.react.ScalaComponent
 import japgolly.scalajs.react.vdom.html_<^._
-import tutorial.webapp.components.Title
+import components.Title
 
 object HomePage {
   private val component = {
