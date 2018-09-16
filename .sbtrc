@@ -1,2 +1,2 @@
-alias build=;fastOptJS::webpack;copyGenerated
-alias build_prod=;fullOptJS::webpack;copyGenerated
+alias build=;fastOptJS::webpack;copyJs
+alias build_prod=;fullOptJS::webpack;copyJsProd

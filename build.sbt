@@ -18,6 +18,8 @@ Compile / npmDependencies ++= Seq(
   "react-dom" -> "16.2.0"
 )
 
-lazy val copyGenerated = TaskKey[Unit]("copyGenerated", "Copy generated files")
+lazy val copyJs = TaskKey[Unit]("copyJs", "Copy generated files")
+lazy val copyJsProd = TaskKey[Unit]("copyJsProd", "Copy production generated files")
 
-copyGenerated := SbtUtils.copyGenerated(baseDirectory.value)
+copyJs := SbtUtils.copyGenerated(baseDirectory.value, mode = SbtUtils.RunMode.Dev)
+copyJsProd := SbtUtils.copyGenerated(baseDirectory.value)
