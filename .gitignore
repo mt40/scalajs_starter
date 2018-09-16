@@ -29,3 +29,4 @@ node_modules/
 
 ### Generated files ###
 oozie/
+bin/js/*.map
