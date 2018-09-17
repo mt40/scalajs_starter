@@ -10,7 +10,9 @@ scalaJSUseMainModuleInitializer := true
 libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.9.6",
   "com.github.japgolly.scalajs-react" %%% "core" % "1.2.3",
-  "com.github.japgolly.scalajs-react" %%% "extra" % "1.2.3"
+  "com.github.japgolly.scalajs-react" %%% "extra" % "1.2.3",
+  "com.github.japgolly.scalacss" %%% "core" % "0.5.3",
+  "com.github.japgolly.scalacss" %%% "ext-react" % "0.5.3"
 )
 
 Compile / npmDependencies ++= Seq(
