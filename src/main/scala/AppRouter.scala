@@ -7,28 +7,24 @@ object AppRouter {
   sealed trait PageRepr
   case object Home extends PageRepr
 
+  final val baseUrl = {
+    // Github Page serves "/scalajs_starter" not "/"
+    val host = BaseUrl.fromWindowOrigin
+    val base = if(host.value.contains("github")) Config.projectName else ""
+    host / base
+  }
+
   private val routerConfig = RouterConfigDsl[PageRepr].buildConfig { dsl =>
     import dsl._
-
-    // Github Page serves "/scalajs_starter" not "/"
-    val publicUrl = sys.env.getOrElse("PUBLIC_URL", "")
-    val siteRoot = root / publicUrl
 
     // the use of `emptyRule` is just for nice formatting
     (emptyRule
     // "/" -> home page
-      | staticRoute(siteRoot, Home) ~> render(HomePage())
-      | staticRedirect(root) ~> redirectToPage(Home)(Redirect.Replace))
-    // not found -> home page
+      | staticRoute(root, Home) ~> render(HomePage()))
       .notFound(redirectToPage(Home)(Redirect.Replace))
   }
 
   def apply() = {
-
-    // REMOVE
-    routerConfig.logToConsole
-
-    val baseUrl = BaseUrl.fromWindowOrigin
     Router(baseUrl, routerConfig)()
   }
 }
